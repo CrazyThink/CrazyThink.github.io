@@ -3,16 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>tags | 습관적 프로그래밍</title>
+    <title>(개인 프로젝트) 클라이언트를 관리하는 서버 프로그램 작성 | 습관적 프로그래밍</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://crazythink.github.io/tags/index.html">
+    <meta name="description" content="소개 인원 : 1인 담당 : 프로그램 구현 전체 개발 환경 : Ubuntu 16.04 LTS, VMware Workstation 14 Player 문제 클라이언트 간의 채팅 프로그램을 기반으로 작성한다. 서버는 접속하는 클라이언트가 송신한 메시지를 모두 관리하고 모니터링 한다. 클라이언트가 보내는 문자를 모두 기록하고 있으며, 총 문자 수, 보낸 시간 등의">
+<meta name="keywords" content="Linux,Chat,Socket">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(개인 프로젝트) 클라이언트를 관리하는 서버 프로그램 작성">
+<meta property="og:url" content="http://crazythink.github.io/2018/05/18/P-Socket/index.html">
 <meta property="og:site_name" content="습관적 프로그래밍">
+<meta property="og:description" content="소개 인원 : 1인 담당 : 프로그램 구현 전체 개발 환경 : Ubuntu 16.04 LTS, VMware Workstation 14 Player 문제 클라이언트 간의 채팅 프로그램을 기반으로 작성한다. 서버는 접속하는 클라이언트가 송신한 메시지를 모두 관리하고 모니터링 한다. 클라이언트가 보내는 문자를 모두 기록하고 있으며, 총 문자 수, 보낸 시간 등의">
 <meta property="og:locale" content="ko-kr">
-<meta property="og:updated_time" content="2018-08-26T22:19:50.000Z">
+<meta property="og:image" content="https://user-images.githubusercontent.com/20267962/44670437-a4e5bc80-aa5d-11e8-991b-3dd99e84d4e2.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/20267962/44670444-a6af8000-aa5d-11e8-9c18-0b196c0b93f0.png">
+<meta property="og:updated_time" content="2018-08-27T16:07:33.937Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="(개인 프로젝트) 클라이언트를 관리하는 서버 프로그램 작성">
+<meta name="twitter:description" content="소개 인원 : 1인 담당 : 프로그램 구현 전체 개발 환경 : Ubuntu 16.04 LTS, VMware Workstation 14 Player 문제 클라이언트 간의 채팅 프로그램을 기반으로 작성한다. 서버는 접속하는 클라이언트가 송신한 메시지를 모두 관리하고 모니터링 한다. 클라이언트가 보내는 문자를 모두 기록하고 있으며, 총 문자 수, 보낸 시간 등의">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/20267962/44670437-a4e5bc80-aa5d-11e8-991b-3dd99e84d4e2.png">
     
 
     
@@ -206,16 +213,192 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main"><section class="layout-wrap">
-    <div class="layout-title">
-        <span>tags</span>
-    </div>
-    <div class="layout-wrap-inner tag-cloud">
+            <section id="main"><article id="post-P-Socket" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-            <a href="/tags/Android/" style="font-size: 14px;">Android</a> <a href="/tags/C/" style="font-size: 23.33px;">C++</a> <a href="/tags/CUDA/" style="font-size: 14px;">CUDA</a> <a href="/tags/Chat/" style="font-size: 18.67px;">Chat</a> <a href="/tags/Editor/" style="font-size: 14px;">Editor</a> <a href="/tags/FTP/" style="font-size: 18.67px;">FTP</a> <a href="/tags/Game/" style="font-size: 14px;">Game</a> <a href="/tags/Linux/" style="font-size: 28px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px;">Markdown</a> <a href="/tags/OpenMP/" style="font-size: 14px;">OpenMP</a> <a href="/tags/Socket/" style="font-size: 18.67px;">Socket</a> <a href="/tags/Typora/" style="font-size: 14px;">Typora</a> <a href="/tags/Unity/" style="font-size: 14px;">Unity</a>
         
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            (개인 프로젝트) 클라이언트를 관리하는 서버 프로그램 작성
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/05/18/P-Socket/">
+            <time datetime="2018-05-18T00:00:00.000Z" itemprop="datePublished">2018-05-18</time>
+        </a>
     </div>
-</section></section>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Projects/">Projects</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Chat/">Chat</a>, <a class="tag-link" href="/tags/Linux/">Linux</a>, <a class="tag-link" href="/tags/Socket/">Socket</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h3 id="소개"><a href="#소개" class="headerlink" title="소개"></a>소개</h3><ul>
+<li>인원 : 1인</li>
+<li>담당 : 프로그램 구현 전체</li>
+<li>개발 환경 : Ubuntu 16.04 LTS, VMware Workstation 14 Player</li>
+<li>문제<ul>
+<li>클라이언트 간의 채팅 프로그램을 기반으로 작성한다.</li>
+<li>서버는 접속하는 클라이언트가 송신한 메시지를 모두 관리하고 모니터링 한다.</li>
+<li>클라이언트가 보내는 문자를 모두 기록하고 있으며, 총 문자 수, 보낸 시간 등의 내역을 보관한다.</li>
+<li>이 외에 서버는 총 접속자 수(클라이언트의 총 접속자 수), 각 클라이언트의 접속 시간, 클라이언트의 IP를 관리한다.</li>
+<li>클라이언트는 최소 5개 이상 접속이 되도록 작성하시오.</li>
+</ul>
+</li>
+</ul>
+<h3 id="내용"><a href="#내용" class="headerlink" title="내용"></a>내용</h3><p>컴퓨터의 수가 부족하여 부득이하게 로컬에서 다중 클라이언트를 실행하였습니다.</p>
+<p><img src="https://user-images.githubusercontent.com/20267962/44670437-a4e5bc80-aa5d-11e8-991b-3dd99e84d4e2.png" alt="1"><br>이 중에 가장 오른 쪽 위에 있는 터미널이 서버 역할을 하고 있습니다.<br>서버에서는 클라이언트가 보내는 메시지를 모두 확인할 수 있습니다.</p>
+<p><img src="https://user-images.githubusercontent.com/20267962/44670444-a6af8000-aa5d-11e8-9c18-0b196c0b93f0.png" alt="2"><br>위 터미널은 서버가 처음 실행되었을 때 나오는 화면이고, 서버는 4가지의 명령어를 사용할 수 있습니다.</p>
+<ul>
+<li><code>help</code> : 도움말 출력</li>
+<li><code>num_user</code> : 현재 접속한 유저의 수</li>
+<li><code>num_chat</code> : 현재까지 오간 대화의 수</li>
+<li><code>ip_list</code> : 현재 접속한 유저들의 IP</li>
+</ul>
+<p>소스코드는 아래 게시물에 있습니다.<br><a href="https://crazythink.github.io/2018/05/25/socketchat/">Linux에서 Socket으로 채팅구현하기</a></p>
+<h3 id="배운-점"><a href="#배운-점" class="headerlink" title="배운 점"></a>배운 점</h3><p>이번 프로젝트는 사용자 편의성을 높이는 데에 더욱 집중하였고, 더욱 깔끔한 출력을 하기 위해서 많은 시간을 투자하였습니다. 그러다보니 평소에 습득하지 못했던 지식을 더욱 알아갈 수 있는 계기가 되었고, 실력향상에 많은 도움이 되었습니다.</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://crazythink.github.io/2018/05/18/P-Socket/" data-id="cjlchuz4v0010r4tziq3cpe0q" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://crazythink.github.io/2018/05/18/P-Socket/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://crazythink.github.io/2018/05/18/P-Socket/">댓글</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/05/24/LinuxColor/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">다음 글</strong>
+            <div class="article-nav-title">
+                
+                    Linux에 색상 출력하기
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2018/05/03/P-OpenMP/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">이전 글</strong>
+            <div class="article-nav-title">(팀 프로젝트) OpenMP를 이용하여 멀티 스레드로 작동하는 정렬 및 검색 프로그램</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+    
+
+</section>
             
                 
 <aside id="sidebar">
@@ -350,9 +533,9 @@ ga('send', 'pageview');
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'http://crazythink.github.io/tags/index.html';
+            this.page.url = 'http://crazythink.github.io/2018/05/18/P-Socket/';
         
-        this.page.identifier = '';
+        this.page.identifier = 'P-Socket';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
