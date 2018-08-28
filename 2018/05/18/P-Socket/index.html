@@ -5,20 +5,20 @@
     
     <title>(개인 프로젝트) 클라이언트를 관리하는 서버 프로그램 작성 | 습관적 프로그래밍</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="소개 인원 : 1인 담당 : 프로그램 구현 전체 개발 환경 : Ubuntu 16.04 LTS, VMware Workstation 14 Player 문제 클라이언트 간의 채팅 프로그램을 기반으로 작성한다. 서버는 접속하는 클라이언트가 송신한 메시지를 모두 관리하고 모니터링 한다. 클라이언트가 보내는 문자를 모두 기록하고 있으며, 총 문자 수, 보낸 시간 등의">
+    <meta name="description" content="소개 인원 : 1인 담당 : 프로그램 구현 전체 개발 환경 : Ubuntu 16.04 LTS, VMware Workstation 14 Player 문제  클라이언트 간의 채팅 프로그램을 기반으로 작성한다.  서버는 접속하는 클라이언트가 송신한 메시지를 모두 관리하고 모니터링 한다.  클라이언트가 보내는 문자를 모두 기록하고 있으며, 총 문자 수, 보낸 시간">
 <meta name="keywords" content="Linux,Chat,Socket">
 <meta property="og:type" content="article">
 <meta property="og:title" content="(개인 프로젝트) 클라이언트를 관리하는 서버 프로그램 작성">
 <meta property="og:url" content="http://crazythink.github.io/2018/05/18/P-Socket/index.html">
 <meta property="og:site_name" content="습관적 프로그래밍">
-<meta property="og:description" content="소개 인원 : 1인 담당 : 프로그램 구현 전체 개발 환경 : Ubuntu 16.04 LTS, VMware Workstation 14 Player 문제 클라이언트 간의 채팅 프로그램을 기반으로 작성한다. 서버는 접속하는 클라이언트가 송신한 메시지를 모두 관리하고 모니터링 한다. 클라이언트가 보내는 문자를 모두 기록하고 있으며, 총 문자 수, 보낸 시간 등의">
+<meta property="og:description" content="소개 인원 : 1인 담당 : 프로그램 구현 전체 개발 환경 : Ubuntu 16.04 LTS, VMware Workstation 14 Player 문제  클라이언트 간의 채팅 프로그램을 기반으로 작성한다.  서버는 접속하는 클라이언트가 송신한 메시지를 모두 관리하고 모니터링 한다.  클라이언트가 보내는 문자를 모두 기록하고 있으며, 총 문자 수, 보낸 시간">
 <meta property="og:locale" content="ko-kr">
 <meta property="og:image" content="https://user-images.githubusercontent.com/20267962/44670437-a4e5bc80-aa5d-11e8-991b-3dd99e84d4e2.png">
 <meta property="og:image" content="https://user-images.githubusercontent.com/20267962/44670444-a6af8000-aa5d-11e8-9c18-0b196c0b93f0.png">
-<meta property="og:updated_time" content="2018-08-27T16:30:24.575Z">
+<meta property="og:updated_time" content="2018-08-28T13:46:09.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="(개인 프로젝트) 클라이언트를 관리하는 서버 프로그램 작성">
-<meta name="twitter:description" content="소개 인원 : 1인 담당 : 프로그램 구현 전체 개발 환경 : Ubuntu 16.04 LTS, VMware Workstation 14 Player 문제 클라이언트 간의 채팅 프로그램을 기반으로 작성한다. 서버는 접속하는 클라이언트가 송신한 메시지를 모두 관리하고 모니터링 한다. 클라이언트가 보내는 문자를 모두 기록하고 있으며, 총 문자 수, 보낸 시간 등의">
+<meta name="twitter:description" content="소개 인원 : 1인 담당 : 프로그램 구현 전체 개발 환경 : Ubuntu 16.04 LTS, VMware Workstation 14 Player 문제  클라이언트 간의 채팅 프로그램을 기반으로 작성한다.  서버는 접속하는 클라이언트가 송신한 메시지를 모두 관리하고 모니터링 한다.  클라이언트가 보내는 문자를 모두 기록하고 있으며, 총 문자 수, 보낸 시간">
 <meta name="twitter:image" content="https://user-images.githubusercontent.com/20267962/44670437-a4e5bc80-aa5d-11e8-991b-3dd99e84d4e2.png">
     
 
@@ -260,14 +260,22 @@ ga('send', 'pageview');
 <li>인원 : 1인</li>
 <li>담당 : 프로그램 구현 전체</li>
 <li>개발 환경 : Ubuntu 16.04 LTS, VMware Workstation 14 Player</li>
-<li>문제<ul>
-<li>클라이언트 간의 채팅 프로그램을 기반으로 작성한다.</li>
-<li>서버는 접속하는 클라이언트가 송신한 메시지를 모두 관리하고 모니터링 한다.</li>
-<li>클라이언트가 보내는 문자를 모두 기록하고 있으며, 총 문자 수, 보낸 시간 등의 내역을 보관한다.</li>
-<li>이 외에 서버는 총 접속자 수(클라이언트의 총 접속자 수), 각 클라이언트의 접속 시간, 클라이언트의 IP를 관리한다.</li>
-<li>클라이언트는 최소 5개 이상 접속이 되도록 작성하시오.</li>
+<li><p>문제</p>
+<ul>
+<li><p>클라이언트 간의 채팅 프로그램을 기반으로 작성한다.</p>
+</li>
+<li><p>서버는 접속하는 클라이언트가 송신한 메시지를 모두 관리하고 모니터링 한다.</p>
+</li>
+<li><p>클라이언트가 보내는 문자를 모두 기록하고 있으며, 총 문자 수, 보낸 시간 등의 내역을 보관한다.</p>
+</li>
+<li><p>이 외에 서버는 총 접속자 수(클라이언트의 총 접속자 수), 각 클라이언트의 접속 시간, 클라이언트의 IP를 관리한다.</p>
+</li>
+<li><p>클라이언트는 최소 5개 이상 접속이 되도록 작성하시오.</p>
+</li>
 </ul>
 </li>
+<li>소스코드 : <a href="https://github.com/CrazyThink/Project/tree/master/Chat" target="_blank" rel="noopener">Linux에서 Socket으로 채팅구현하기</a></li>
+<li>사용법 : <a href="https://crazythink.github.io/2018/05/25/socketchat/">Linux에서 Socket으로 채팅구현하기</a></li>
 </ul>
 <h2 id="내용"><a href="#내용" class="headerlink" title="내용"></a>내용</h2><p>컴퓨터의 수가 부족하여 부득이하게 로컬에서 다중 클라이언트를 실행하였습니다.</p>
 <p><img src="https://user-images.githubusercontent.com/20267962/44670437-a4e5bc80-aa5d-11e8-991b-3dd99e84d4e2.png" alt=""><br>이 중에 가장 오른 쪽 위에 있는 터미널이 서버 역할을 하고 있습니다.<br>서버에서는 클라이언트가 보내는 메시지를 모두 확인할 수 있습니다.</p>
@@ -278,7 +286,6 @@ ga('send', 'pageview');
 <li><code>num_chat</code> : 현재까지 오간 대화의 수</li>
 <li><code>ip_list</code> : 현재 접속한 유저들의 IP</li>
 </ul>
-<p>소스코드는 아래 게시물에 있습니다.<br><a href="https://crazythink.github.io/2018/05/25/socketchat/">Linux에서 Socket으로 채팅구현하기</a></p>
 <h2 id="배운-점"><a href="#배운-점" class="headerlink" title="배운 점"></a>배운 점</h2><p>이번 프로젝트는 사용자 편의성을 높이는 데에 더욱 집중하였고, 더욱 깔끔한 출력을 하기 위해서 많은 시간을 투자하였습니다. 그러다보니 평소에 습득하지 못했던 지식을 더욱 알아갈 수 있는 계기가 되었고, 실력향상에 많은 도움이 되었습니다.</p>
 
         
@@ -290,7 +297,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://crazythink.github.io/2018/05/18/P-Socket/" data-id="cjlci18ve000hw0tz5m86p1bh" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="http://crazythink.github.io/2018/05/18/P-Socket/" data-id="cjldrlwzr000cwotzuc82ctpe" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
