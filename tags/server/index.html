@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html  lang="ko">
+<head>
+    <meta charset="utf-8">
+<title>Tag: server - 습관적 프로그래밍</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="습관적 프로그래밍">
+<meta property="og:url" content="http://crazythink.github.io/tags/server/index.html">
+<meta property="og:site_name" content="습관적 프로그래밍">
+<meta property="og:locale" content="ko-kr">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="습관적 프로그래밍">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.png" alt="습관적 프로그래밍" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/crazythink">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="검색" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-9-tablet is-9-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">Tags</a></li>
+            <li class="is-active"><a href="#" aria-current="page">server</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-01-29T12:00:00.000Z">2019-01-29</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Tomcat/">Tomcat</a>
+                </div>
+                
+                <!--
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    13분 read (About 1984 words)
+                </span>
+                
+                -->
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/01/29/TheContextContainer/">The Context Container(미완성)</a>
+            
+        </h1>
+        <div class="content">
+            <h3 id="원문"><a href="#원문" class="headerlink" title="원문"></a>원문</h3><p><a href="https://tomcat.apache.org/tomcat-8.5-doc/config/context.html#Context_Parameters" target="_blank" rel="noopener">https://tomcat.apache.org/tomcat-8.5-doc/config/context.html#Context_Parameters</a></p>
+<h3 id="소개"><a href="#소개" class="headerlink" title="소개"></a>소개</h3><p>기본 디렉토리로 <code>$CATALINA_BASE</code> 의 상대 경로를 사용하고, 설정하지 않은 경우에는 <code>$CATALINA_HOME</code>으로 설정됩니다. 컨텍스트 경로는 가장 긴 Request URI 부터 매칭됩니다.</p>
+<h3 id="속성"><a href="#속성" class="headerlink" title="속성"></a>속성</h3><ul>
+<li><p>allowCasualMultipartParsing<br>대상 서블릿이 <code>@MultipartConfig</code> 어노테이션으로 표시되지 않은 경우에도 <code>HttpServletRequest.getPart*</code> 또는 <code>HttpServletRequest.getParameter*</code>가 호출 될 때, 톰캣이 multipart / form-data 요청 본문을 자동으로 구문 분석해야하는 경우 <code>true</code>로 설정합니다. <code>false</code>가 아닌 다른 설정은 톰캣이 기술적으로 규격을 준수하지 않는 방식으로 작동하도록합니다. 기본값은 <code>false</code>입니다.</p>
+</li>
+<li><p>allowMultipleLeadingForwardSlashInPath</p>
+<p>Tomcat normalises sequences of multiple <code>/</code> characters in a URI to a single <code>/</code>. This is for consistencuy with the behaviour of file systems as URIs are often translated to file system paths. As a result, the return value of <code>HttpServletRequest#getContextPath()</code> is expected to start with multiple <code>/</code> characters for some URIs. This will cause problems if this value is used directly with <code>HttpServletResponse#sendRedirect()</code> as redirect paths that start with <code>//</code> are treated as protocol relative redirects. To avoid potential issues, Tomcat will collapse multiple leading <code>/</code> characters at the start of the return value for<code>HttpServletRequest#getContextPath()</code> to a single <code>/</code>. This attribute has a default value of <code>false</code> which enables the collapsing of multiple <code>/</code> characters. To disable this behaviour, set this attribute to <code>true</code>.</p>
+</li>
+<li><p>altDDName<br><code>alternative deployment descriptor</code>의 절대 경로입니다. 이는<code>/WEB-INF/web.xml</code>에 있는 <code>default deployment descriptor</code>를 <code>override</code> 합니다.</p>
+</li>
+<li><p>backgroundProcessorDelay</p>
+<p><code>backgroundProcess</code>메소드를 호출할 때 까지의 지연시간을 초 단위로 나타냅니다. 기본값은 <code>-1</code>이고, 컨텍스트가 상위 호스트의 백그라운드 처리 스레드에 의존함을 의미합니다.</p>
+</li>
+<li><p>className</p>
+<p>사용할 Java클래스 이름. 이 클래스는 <code>org.apache.catalina.Context</code>인터페이스를 구현해야합니다. 지정하지 않으면 표준값이 사용됩니다.</p>
+</li>
+<li><p>containerSciFilter</p>
+<p>SCI가 제공한 컨테이너의 정규식으로 이 컨텍스트에 사용하지 않도록 필터링합니다. 매칭은 <code>java.util.regex.Matcher.find()</code>를 사용하므로 정규 표현식은 필터링을 위해 SCI가 제공 한 컨테이너의 정규화 된 클래스 이름의 하위 문자열과 일치해야합니다. 지정하지 않으면 필터링이 적용되지 않습니다.</p>
+</li>
+<li><p>cookies</p>
+<p>브라우저가 쿠키를 지원해야하고, 세션 식별 통신에 쿠키를 사용하려면 <code>true</code>로 설정합니다.</p>
+</li>
+<li><p>crossContext</p>
+<p>이 응용 프로그램 내에서 <code>ServletContext.getContext()</code> 호출이 이 가상 호스트에서 실행중인 다른 웹 응용 프로그램의 요청 디스패처를 성공적으로 반환하도록하려면 <code>true</code>로 설정합니다. 보안이 있는 환경에서는 <code>false</code> (기본값)로 설정하여 <code>getContext()</code>가 항상 <code>null</code>을 반환하도록합니다.</p>
+</li>
+<li><p>docBase</p>
+<p>웹애플리케이션을 위한 문서 디렉토리나 웹애플리케이션의 아카이브 파일의 경로이름입니다. 절대경로나 <code>appBase</code>의 상대경로로 지정이 가능합니다. 컨텍스트 요소가 <code>server.xml</code>에 정의되어 있거나 <code>docBase</code>가 호스트의 <code>appBase</code>아래에 정의되어 있지 않다면 필드의 값을 설정하지 않아야 합니다. <code>docBase</code>에 심볼릭 링크가 사용되면 톰캣을 재시작하거나 컨텍스트를 재배포해야 적용됩니다.</p>
+</li>
+<li><p>dispatchersUseEncodedPaths</p>
+<p>인코딩 여부를 제어합니다. 이것은 톰캣이 요청 디스패처를 얻기 위해 호출을 처리하는 것과 내부적으로 요청 디스패처를 얻는 데 사용되는 경로를 생성하는 것에 모두 영향을 줍니다. 기본값은 <code>true</code>입니다.</p>
+</li>
+<li><p>failCtxIfServletStartFails</p>
+<p>서블릿이 <code>load-on-startup &gt;=0</code>인 경우 컨텍스트 시작을 실패하도록 하려면 <code>true</code>로 설정합니다. 지정하지 않으면 상위 호스트의 구성에서 동일한 이름의 속성이 지정된 경우 그것을 사용힙니다. 그렇지 않으면 기본값이 <code>false</code>가 사용됩니다.</p>
+</li>
+<li><p>fireRequestListenersOnForwards</p>
+<p>톰캣이 요청을 전달할 때 구성된 <code>ServletRequestListeners</code>를 시작하려면 <code>true</code>로 설정합니다. 주로 <code>ServletRequestListeners</code>를 사용하여 요청에 필요한 환경을 구성하는 CDI 프레임 워크 사용자에게 유용합니다. 지정하지 않으면 <code>false</code>의 기본값이 사용됩니다.</p>
+</li>
+<li><p>logEffectiveWebXml</p>
+<p>애플리케이션이 시작될 때 웹애플리케이션에 사용되는 유효한 <code>web.xml</code>이 (INFO 수준에서) 기록되도록하려면 <code>true</code>로 설정합니다. 효과적인 <code>web.xml</code>은 톰캣이 구성한 모든 기본값과 발견 된 <code>web-fragment.xml</code> 파일 및 주석을 결합한 애플리케이션의 <code>web.xml</code>입니다. 지정하지 않으면 <code>false</code>의 기본값이 사용됩니다.</p>
+</li>
+<li><p>mapperContextRootRedirectEnabled</p>
+<p>활성화 된 경우 웹애플리케이션 컨텍스트 루트에 대한 요청은 기본 서블릿이 아닌 매퍼가 필요에 따라 리디렉션됩니다. 이것은 효율적이지만 컨텍스트 경로가 있는지 확인하는 문제가 있습니다. 지정하지 않으면 기본값 <code>true</code>가 사용됩니다.</p>
+</li>
+<li><p>mapperDirectoryRedirectEnabled</p>
+<p>활성화 된 경우 웹애플리케이션 디렉토리에 대한 요청은 기본 서블릿이 아닌 매퍼가 필요에 따라 리디렉션됩니다. 이것은 효율적이지만 디렉토리가 있는지 확인하는 문제가 있습니다. 지정하지 않으면 기본값 <code>false</code>가 사용됩니다.</p>
+</li>
+<li><p>override</p>
+<p>전역 또는 호스트 기본 컨텍스트의 설정을 무시하려면 <code>true</code>로 설정합니다. 기본적으로 기본 컨텍스트의 설정이 사용되지만 컨텍스트에 대해 동일한 속성을 명시적으로 설정하여 무시할 수 있습니다.</p>
+</li>
+<li><p>path</p>
+<p>처리 할 적절한 웹애플리케이션을 선택하기 위해 각 request URI의 시작과 대조되는 이 웹 응용 프로그램의 컨텍스트 경로입니다. 특정 호스트 내의 모든 컨텍스트 경로는 고유해야합니다. 빈 문자열 ( “”)의 컨텍스트 경로를 지정하면이 호스트에 대한 기본 웹애플리케이션을 정의하며 다른 컨텍스트에 할당되지 않은 모든 요청을 처리합니다.</p>
+<p>이 속성은 <code>server.xml</code>에서 컨텍스트를 정적으로 정의 할 때만 사용해야합니다. 다른 모든 상황에서는 경로가 <code>.xml</code> 컨텍스트 파일 또는 <code>docBase</code>에 사용 된 파일 이름에서 유추됩니다.</p>
+<p><code>server.xml</code>에서 컨텍스트를 정적으로 정의하는 경우에도 이 속성은 <code>docBase</code>가 호스트의 <code>appBase</code> 아래에 있거나 <code>deployOnStartup</code> 과 <code>autoDeploy</code>가 모두 <code>false</code>가 아닌 경우에만 설정해야합니다. 이 규칙을 지키지 않으면 이중 배포가 발생할 수 있습니다.</p>
+</li>
+<li><p>preemptiveAuthentication</p>
+<p><code>true</code>로 설정되고 사용자가 보안 제한 조건에 의해 보호되지 않는 자원에 대한 자격을 제시하면, 인증자가 선점인증을 지원하는 경우에 사용자의 자격 증명이 처리됩니다. 지정하지 않으면 기본값 인 <code>false</code>가 사용됩니다.</p>
+</li>
+<li><p>privileged</p>
+<p>이 컨텍스트가 관리자 서블릿과 같은 컨테이너 서블릿을 사용할 수 있게 하려면 <code>true</code>로 설정합니다. 특별한 속성의 사용은 컨텍스트의 parent 클래스 로더를 Shared 클래스 로더 대신에 Server 클래스 로더로 변경합니다. 기본 설치에서는 Common 클래스 로더가 Server 클래스 로더와 Shared 클래스 로더 모두에 사용됩니다.</p>
+</li>
+<li><p>reloadable</p>
+</li>
+<li><p>resourceOnlyServlets</p>
+</li>
+<li><p>sendRedirectBody</p>
+</li>
+<li><p>sessionCookieDomain</p>
+</li>
+<li><p>sessionCookieName</p>
+</li>
+<li><p>sessionCookiePath</p>
+</li>
+<li><p>sessionCookiePathUsesTrailingSlash</p>
+</li>
+<li><p>swallowAbortedUploads</p>
+</li>
+<li><p>swallowOutput</p>
+</li>
+<li><p>tldValidation</p>
+</li>
+<li><p>useHttpOnly</p>
+</li>
+<li><p>useRelativeRedirects</p>
+</li>
+<li><p>validateClientProvidedNewSessionId</p>
+</li>
+<li><p>wrapperClass</p>
+</li>
+<li><p>xmlBlockExternal</p>
+</li>
+<li><p>xmlNamespaceAware</p>
+</li>
+<li><p>xmlValidation</p>
+</li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+                
+
+
+
+
+<div class="column is-3-tablet is-3-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <img class="image is-128x128 has-mb-6" src="/images/avatar.jpg" alt="Daeyoung Kim">
+                    
+                    <p class="is-size-4 is-block">
+                        Daeyoung Kim
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Developer
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Korea</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        22
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        8
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        30
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/crazythink">
+                Follow</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="https://github.com/crazythink">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Facebook" href="/">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/C/">
+            <span class="level-start">
+                <span class="level-item">C++</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/CUDA/">
+            <span class="level-start">
+                <span class="level-item">CUDA</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Diary/">
+            <span class="level-start">
+                <span class="level-item">Diary</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Linux/">
+            <span class="level-start">
+                <span class="level-item">Linux</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Projects/">
+            <span class="level-start">
+                <span class="level-item">Projects</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">10</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Spring/">
+            <span class="level-start">
+                <span class="level-item">Spring</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Tomcat/">
+            <span class="level-start">
+                <span class="level-item">Tomcat</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Tools/">
+            <span class="level-start">
+                <span class="level-item">Tools</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 13.33px;">C#</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/CS188/" style="font-size: 10px;">CS188</a> <a href="/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/tags/Chat/" style="font-size: 13.33px;">Chat</a> <a href="/tags/Diary/" style="font-size: 10px;">Diary</a> <a href="/tags/Editor/" style="font-size: 10px;">Editor</a> <a href="/tags/FTP/" style="font-size: 13.33px;">FTP</a> <a href="/tags/Game/" style="font-size: 10px;">Game</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Messenger/" style="font-size: 10px;">Messenger</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/NHN/" style="font-size: 10px;">NHN</a> <a href="/tags/OpenMP/" style="font-size: 13.33px;">OpenMP</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/STL/" style="font-size: 13.33px;">STL</a> <a href="/tags/Singleton/" style="font-size: 10px;">Singleton</a> <a href="/tags/Socket/" style="font-size: 13.33px;">Socket</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/Unity/" style="font-size: 10px;">Unity</a> <a href="/tags/server/" style="font-size: 10px;">server</a>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-29T12:00:00.000Z">2019-01-29</time></div>
+                    <a href="/2019/01/29/TheContextContainer/" class="has-link-black-ter is-size-6">The Context Container(미완성)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Tomcat/">Tomcat</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-28T06:25:00.000Z">2019-01-28</time></div>
+                    <a href="/2019/01/28/SingletonIssue/" class="has-link-black-ter is-size-6">싱글톤 주의하기</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Spring/">Spring</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-10T14:21:43.000Z">2019-01-10</time></div>
+                    <a href="/2019/01/10/D-Week1/" class="has-link-black-ter is-size-6">NHN 1주차 - 입문교육</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Diary/">Diary</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-28T10:00:00.000Z">2018-09-28</time></div>
+                    <a href="/2018/09/28/algorithm/" class="has-link-black-ter is-size-6">&lt;algorithm&gt;</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/C/">C++</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-28T09:00:00.000Z">2018-09-28</time></div>
+                    <a href="/2018/09/28/LRU/" class="has-link-black-ter is-size-6">Least Recently Used</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/C/">C++</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">7</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2014/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2014</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/AI/">
+                        <span class="level-start">
+                            <span class="level-item">AI</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Android/">
+                        <span class="level-start">
+                            <span class="level-item">Android</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/C/">
+                        <span class="level-start">
+                            <span class="level-item">C</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/C/">
+                        <span class="level-start">
+                            <span class="level-item">C#</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/C/">
+                        <span class="level-start">
+                            <span class="level-item">C++</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">7</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/CS188/">
+                        <span class="level-start">
+                            <span class="level-item">CS188</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/CUDA/">
+                        <span class="level-start">
+                            <span class="level-item">CUDA</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Chat/">
+                        <span class="level-start">
+                            <span class="level-item">Chat</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Diary/">
+                        <span class="level-start">
+                            <span class="level-item">Diary</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Editor/">
+                        <span class="level-start">
+                            <span class="level-item">Editor</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/FTP/">
+                        <span class="level-start">
+                            <span class="level-item">FTP</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Game/">
+                        <span class="level-start">
+                            <span class="level-item">Game</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Java/">
+                        <span class="level-start">
+                            <span class="level-item">Java</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Linux/">
+                        <span class="level-start">
+                            <span class="level-item">Linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">5</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Markdown/">
+                        <span class="level-start">
+                            <span class="level-item">Markdown</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Messenger/">
+                        <span class="level-start">
+                            <span class="level-item">Messenger</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/MySQL/">
+                        <span class="level-start">
+                            <span class="level-item">MySQL</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/NHN/">
+                        <span class="level-start">
+                            <span class="level-item">NHN</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/OpenMP/">
+                        <span class="level-start">
+                            <span class="level-item">OpenMP</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Oracle/">
+                        <span class="level-start">
+                            <span class="level-item">Oracle</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/PHP/">
+                        <span class="level-start">
+                            <span class="level-item">PHP</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Python/">
+                        <span class="level-start">
+                            <span class="level-item">Python</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/STL/">
+                        <span class="level-start">
+                            <span class="level-item">STL</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Singleton/">
+                        <span class="level-start">
+                            <span class="level-item">Singleton</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Socket/">
+                        <span class="level-start">
+                            <span class="level-item">Socket</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Spring/">
+                        <span class="level-start">
+                            <span class="level-item">Spring</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Tomcat/">
+                        <span class="level-start">
+                            <span class="level-item">Tomcat</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Typora/">
+                        <span class="level-start">
+                            <span class="level-item">Typora</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Unity/">
+                        <span class="level-start">
+                            <span class="level-item">Unity</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/server/">
+                        <span class="level-start">
+                            <span class="level-item">server</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.png" alt="습관적 프로그래밍" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Daeyoung Kim&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("ko-kr");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="검색어를 입력하세요..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
