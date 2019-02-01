@@ -151,7 +151,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    13분 read (About 1984 words)
+                    19분 read (About 2911 words)
                 </span>
                 
                 -->
@@ -160,7 +160,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/01/29/TheContextContainer/">The Context Container(미완성)</a>
+                <a class="has-link-black-ter" href="/2019/01/29/TheContextContainer/">The Context Container</a>
             
         </h1>
         <div class="content">
@@ -170,7 +170,7 @@
 <li><p>allowCasualMultipartParsing<br>대상 서블릿이 <code>@MultipartConfig</code> 어노테이션으로 표시되지 않은 경우에도 <code>HttpServletRequest.getPart*</code> 또는 <code>HttpServletRequest.getParameter*</code>가 호출 될 때, 톰캣이 multipart / form-data 요청 본문을 자동으로 구문 분석해야하는 경우 <code>true</code>로 설정합니다. <code>false</code>가 아닌 다른 설정은 톰캣이 기술적으로 규격을 준수하지 않는 방식으로 작동하도록합니다. 기본값은 <code>false</code>입니다.</p>
 </li>
 <li><p>allowMultipleLeadingForwardSlashInPath</p>
-<p>Tomcat normalises sequences of multiple <code>/</code> characters in a URI to a single <code>/</code>. This is for consistencuy with the behaviour of file systems as URIs are often translated to file system paths. As a result, the return value of <code>HttpServletRequest#getContextPath()</code> is expected to start with multiple <code>/</code> characters for some URIs. This will cause problems if this value is used directly with <code>HttpServletResponse#sendRedirect()</code> as redirect paths that start with <code>//</code> are treated as protocol relative redirects. To avoid potential issues, Tomcat will collapse multiple leading <code>/</code> characters at the start of the return value for<code>HttpServletRequest#getContextPath()</code> to a single <code>/</code>. This attribute has a default value of <code>false</code> which enables the collapsing of multiple <code>/</code> characters. To disable this behaviour, set this attribute to <code>true</code>.</p>
+<p>톰캣에 여러 <code>/</code>를 단일 <code>/</code>로 정규화합니다. 이것은 URI가 파일 시스템 경로로 변환되는 것처럼 파일 시스템의 동작과 일관성을 유지하지 위함입니다. 기본값은 <code>false</code>이며 여러 개의 <code>/</code>문자를 접을 수 있습니다.</p>
 </li>
 <li><p>altDDName<br><code>alternative deployment descriptor</code>의 절대 경로입니다. 이는<code>/WEB-INF/web.xml</code>에 있는 <code>default deployment descriptor</code>를 <code>override</code> 합니다.</p>
 </li>
@@ -225,38 +225,56 @@
 <p>이 컨텍스트가 관리자 서블릿과 같은 컨테이너 서블릿을 사용할 수 있게 하려면 <code>true</code>로 설정합니다. 특별한 속성의 사용은 컨텍스트의 parent 클래스 로더를 Shared 클래스 로더 대신에 Server 클래스 로더로 변경합니다. 기본 설치에서는 Common 클래스 로더가 Server 클래스 로더와 Shared 클래스 로더 모두에 사용됩니다.</p>
 </li>
 <li><p>reloadable</p>
+<p>파일에 변화가 있을 때 자동으로 로딩할지 설정합니다. 기본값은 <code>false</code>입니다.</p>
 </li>
 <li><p>resourceOnlyServlets</p>
+<p>리소스가 존재하는 쉼표로 구분된 서블릿 이름의 목록입니다. </p>
 </li>
 <li><p>sendRedirectBody</p>
+<p><code>true</code>인 경우 리디렉션의 응답에 RFC2616에서 권장하는 리디렉션의 세부 정보가 포함됩니다. 응답 본문을 포함하면 압축 필터와 같은 일부 애플리케이션 구성 요소에 문제가 발생할 수 있으므로 기본적으로 사용하지 않도록 설정합니다.</p>
 </li>
 <li><p>sessionCookieDomain</p>
+<p>세션쿠키에 사용할 도메인입니다. </p>
 </li>
 <li><p>sessionCookieName</p>
+<p>세션쿠키에 사용하는 이름입니다. 설정한 경우 웹애플리케이션에서 설정한 이름을 무시합니다.</p>
 </li>
 <li><p>sessionCookiePath</p>
+<p>세션쿠키의 경로입니다. 설정한 경우 웹애플리케이션에서 설정한 경로를 무시합니다.</p>
 </li>
 <li><p>sessionCookiePathUsesTrailingSlash</p>
+<p>Internet Explorer, Safari, Edge 브라우저에서 RFC6265를 위반하여 <code>/foobar</code>의 요청으로 <code>/foo</code> 경로를 가진 컨텍스트에 대한 세션 쿠키를 보내는 문제가 있습니다. 이 위험을 줄이려면 <code>true</code>로 설정합니다. 그러면 톰캣은 세션 쿠키와 연결된 경로에 후행 슬래시를 추가합니다. 위의 예에서 쿠키 경로는 <code>/foo/</code>가 됩니다.</p>
+<p><code>/*</code>에 매핑 된 서블릿이 없으면 문제가되지 않습니다. 이 속성을 비활성화하려면 <code>false</code>로 설정합니다. 기본값은 <code>false</code>입니다.</p>
 </li>
 <li><p>swallowAbortedUploads</p>
+<p>톰캣이 중단된 업로드에 대한 추가 요청 데이터를 읽지 않고 대신 클라이언트 연결을 중단해야하는 경우 <code>true</code>로 설정합니다. 추가 데이터를 읽지 않으면 요청 처리 스레드가 더 빠르게 해제됩니다.</p>
 </li>
 <li><p>swallowOutput</p>
+<p><code>true</code>인 경우에 <code>system.out</code>과 <code>system.err</code>로 출력한 바이트가 웹애플리케이션의 <code>logger</code>로 리디렉션 됩니다. 기본값은 <code>false</code>입니다.</p>
 </li>
 <li><p>tldValidation</p>
+<p><code>true</code>인 경우에 <code>TLD</code>파일은 컨텍스트 시작시에 <code>XML</code>유효성을 검사합니다. <code>org.apache.catalina.STRICT_SERVLET_COMPLIANCE</code>가 <code>true</code>인 경우 디폴트 값은 <code>true</code>이고, 그렇지 않은 경우 디폴트 값은 <code>false</code>가 됩니다. <code>true</code>인 경우 성능에 좋지 않은 영향이 있습니다.</p>
 </li>
 <li><p>useHttpOnly</p>
+<p>클라이언트의 스크립트가 세션 ID에 접근하지 못하도록 합니다. 기본값은 <code>true</code>입니다.</p>
 </li>
 <li><p>useRelativeRedirects</p>
+<p><code>HTTP 1.1</code> 이상이고 <code>javax.servlet.http.HttpServletResponse#sendRedirect(String)</code>의 호출로 생성된 헤더가 절대경로나 상대경로로 리디렉션 할지 여부를 제어합니다. <code>org.apache.catalina.STRICT_SERVLET_COMPLIANCE</code>가 <code>true</code>인 경우 디폴트 값은 <code>false</code>이고, 그렇지 않은 경우 디폴트 값은 <code>true</code>가 됩니다.</p>
 </li>
 <li><p>validateClientProvidedNewSessionId</p>
+<p>클라이언트가 새 세션ID를 제공하면 이 속성은 해당 ID가 유효한지 여부를 제어합니다. 기본값은 <code>true</code>입니다.</p>
 </li>
 <li><p>wrapperClass</p>
+<p><code>org.apache.catalina.Wrapper</code>의 자바 클래스 이름입니다. 지정하지 않으면 기본값이 사용됩니다.</p>
 </li>
 <li><p>xmlBlockExternal</p>
+<p><code>true</code>인 경우에 <code>web.xml</code>, <code>web-fragment.xml</code>, <code>*.tld</code>, <code>*.jspx</code>, <code>*.tagx</code> and <code>tagPlugins.xml</code> 파일의 파싱에 외부 엔터티를 로드할 수 없습니다. 기본값은 <code>true</code>입니다.</p>
 </li>
 <li><p>xmlNamespaceAware</p>
+<p><code>true</code>인 경우에 <code>web.xml</code>, <code>web-fragment.xml</code>파일의 파싱이 <code>namespace-aware</code>가 됩니다. <code>org.apache.catalina.STRICT_SERVLET_COMPLIANCE</code>가 <code>true</code>인 경우 디폴트 값은 <code>true</code>이고, 그렇지 않은 경우 디폴트 값은 <code>false</code>가 됩니다. <code>true</code>인 경우 <code>xmlValidation</code>옵션도 <code>true</code>가 됩니다.</p>
 </li>
 <li><p>xmlValidation</p>
+<p><code>true</code>인 경우에 <code>web.xml</code>, <code>web-fragment.xml</code>파일의 유효성(문법)을 검사합니다. <code>org.apache.catalina.STRICT_SERVLET_COMPLIANCE</code>가 <code>true</code>인 경우 디폴트 값은 <code>true</code>이고, 그렇지 않은 경우 디폴트 값은 <code>false</code>가 됩니다. <code>true</code>인 경우 성능에 좋지 않은 영향이 있습니다.</p>
 </li>
 </ul>
 
@@ -994,7 +1012,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-29T12:00:00.000Z">2019-01-29</time></div>
-                    <a href="/2019/01/29/TheContextContainer/" class="has-link-black-ter is-size-6">The Context Container(미완성)</a>
+                    <a href="/2019/01/29/TheContextContainer/" class="has-link-black-ter is-size-6">The Context Container</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Tomcat/">Tomcat</a>
                     </p>
