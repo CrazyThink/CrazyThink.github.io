@@ -2,23 +2,18 @@
 <html  lang="ko">
 <head>
     <meta charset="utf-8">
-<title>Linux에 색상 출력하기 - 습관적 프로그래밍</title>
+<title>Tag: Redis - 습관적 프로그래밍</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
 
-    <meta name="description" content="Terminal에 미리보기형식 지정1234567&amp;gt; for code in &amp;#123;30..37&amp;#125;; do \echo -en &quot;\033[$&amp;#123;code&amp;#125;m&quot;&apos;\\033[&apos;&quot;$code&quot;&apos;m&apos;&quot;\033[0m&quot;; \echo -en &quot;  \033[$code;1m&quot;&apos;\\033[&apos;&quot;$code&quot;&apos;;1m&apos;&quot;\033[0m&quot;; \echo -en &quot;">
-<meta name="keywords" content="Linux">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Linux에 색상 출력하기">
-<meta property="og:url" content="http://crazythink.github.io/2018/05/24/LinuxColor/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="습관적 프로그래밍">
+<meta property="og:url" content="http://crazythink.github.io/tags/Redis/index.html">
 <meta property="og:site_name" content="습관적 프로그래밍">
-<meta property="og:description" content="Terminal에 미리보기형식 지정1234567&amp;gt; for code in &amp;#123;30..37&amp;#125;; do \echo -en &quot;\033[$&amp;#123;code&amp;#125;m&quot;&apos;\\033[&apos;&quot;$code&quot;&apos;m&apos;&quot;\033[0m&quot;; \echo -en &quot;  \033[$code;1m&quot;&apos;\\033[&apos;&quot;$code&quot;&apos;;1m&apos;&quot;\033[0m&quot;; \echo -en &quot;">
 <meta property="og:locale" content="ko-kr">
-<meta property="og:updated_time" content="2018-08-26T22:19:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux에 색상 출력하기">
-<meta name="twitter:description" content="Terminal에 미리보기형식 지정1234567&amp;gt; for code in &amp;#123;30..37&amp;#125;; do \echo -en &quot;\033[$&amp;#123;code&amp;#125;m&quot;&apos;\\033[&apos;&quot;$code&quot;&apos;m&apos;&quot;\033[0m&quot;; \echo -en &quot;  \033[$code;1m&quot;&apos;\\033[&apos;&quot;$code&quot;&apos;;1m&apos;&quot;\033[0m&quot;; \echo -en &quot;">
+<meta name="twitter:title" content="습관적 프로그래밍">
 
 
 
@@ -88,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="Linux에 색상 출력하기" height="28">
+                <img src="/images/logo.png" alt="습관적 프로그래밍" height="28">
             
             </a>
         </div>
@@ -139,15 +134,26 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-9-tablet is-9-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">Tags</a></li>
+            <li class="is-active"><a href="#" aria-current="page">Redis</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-24T03:38:57.000Z">2018-05-24</time>
+                <time class="level-item has-text-grey" datetime="2019-02-09T11:00:00.000Z">2019-02-09</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
+                <a class="has-link-grey -link" href="/categories/Spring/">Spring</a>
                 </div>
                 
                 <!--
@@ -155,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1분 read (About 212 words)
+                    2분 read (About 285 words)
                 </span>
                 
                 -->
@@ -164,70 +170,16 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Linux에 색상 출력하기
+                <a class="has-link-black-ter" href="/2019/02/09/Redis/">Redis 설치</a>
             
         </h1>
         <div class="content">
-            <h2 id="Terminal에-미리보기"><a href="#Terminal에-미리보기" class="headerlink" title="Terminal에 미리보기"></a>Terminal에 미리보기</h2><h3 id="형식-지정"><a href="#형식-지정" class="headerlink" title="형식 지정"></a>형식 지정</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="hljs-keyword">for</span> code <span class="hljs-keyword">in</span> &#123;30..37&#125;; <span class="hljs-keyword">do</span> \</span><br><span class="line"><span class="hljs-built_in">echo</span> -en <span class="hljs-string">"\033[<span class="hljs-variable">$&#123;code&#125;</span>m"</span><span class="hljs-string">'\\033['</span><span class="hljs-string">"<span class="hljs-variable">$code</span>"</span><span class="hljs-string">'m'</span><span class="hljs-string">"\033[0m"</span>; \</span><br><span class="line"><span class="hljs-built_in">echo</span> -en <span class="hljs-string">"  \033[<span class="hljs-variable">$code</span>;1m"</span><span class="hljs-string">'\\033['</span><span class="hljs-string">"<span class="hljs-variable">$code</span>"</span><span class="hljs-string">';1m'</span><span class="hljs-string">"\033[0m"</span>; \</span><br><span class="line"><span class="hljs-built_in">echo</span> -en <span class="hljs-string">"  \033[<span class="hljs-variable">$code</span>;3m"</span><span class="hljs-string">'\\033['</span><span class="hljs-string">"<span class="hljs-variable">$code</span>"</span><span class="hljs-string">';3m'</span><span class="hljs-string">"\033[0m"</span>; \</span><br><span class="line"><span class="hljs-built_in">echo</span> -en <span class="hljs-string">"  \033[<span class="hljs-variable">$code</span>;4m"</span><span class="hljs-string">'\\033['</span><span class="hljs-string">"<span class="hljs-variable">$code</span>"</span><span class="hljs-string">';4m'</span><span class="hljs-string">"\033[0m"</span>; \</span><br><span class="line"><span class="hljs-built_in">echo</span> -e <span class="hljs-string">"  \033[<span class="hljs-variable">$((code+60)</span>)m"</span><span class="hljs-string">'\\033['</span><span class="hljs-string">"<span class="hljs-variable">$((code+60)</span>)"</span><span class="hljs-string">'m'</span><span class="hljs-string">"\033[0m"</span>; \</span><br><span class="line"><span class="hljs-keyword">done</span></span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>형식 종류</th>
-<th style="text-align:center">값</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bold</td>
-<td style="text-align:center">1</td>
-</tr>
-<tr>
-<td>Underscore</td>
-<td style="text-align:center">4</td>
-</tr>
-<tr>
-<td>Background</td>
-<td style="text-align:center">3</td>
-</tr>
-</tbody>
-</table>
-<h3 id="255-색상-출력"><a href="#255-색상-출력" class="headerlink" title="255 색상 출력"></a>255 색상 출력</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="hljs-keyword">for</span> code <span class="hljs-keyword">in</span> &#123;0..255&#125;</span><br><span class="line">    <span class="hljs-keyword">do</span> <span class="hljs-built_in">echo</span> -e <span class="hljs-string">"\033[38;5;<span class="hljs-variable">$&#123;code&#125;</span>m"</span><span class="hljs-string">'\\033[38;5;'</span><span class="hljs-string">"<span class="hljs-variable">$code</span>"</span>m<span class="hljs-string">"\033[0m"</span></span><br><span class="line">  <span class="hljs-keyword">done</span></span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>색상 종류</th>
-<th>범위</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Basic 8 colors</td>
-<td>30~37</td>
-</tr>
-<tr>
-<td>Basic “high contrast” colors</td>
-<td>90~97</td>
-</tr>
-<tr>
-<td>xerm-256 colors</td>
-<td>0~255</td>
-</tr>
-</tbody>
-</table>
-<h2 id="사용법"><a href="#사용법" class="headerlink" title="사용법"></a>사용법</h2><p>이 코드를 사용하기 전에 위에 있는 코드를 Terminal에 실행 후 색상을 확인하고 사용 바람!!</p>
-<h3 id="bash"><a href="#bash" class="headerlink" title="bash"></a>bash</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="hljs-built_in">echo</span> -e <span class="hljs-string">"\033[38;5;[0~255]m[contents]\033[0m"</span></span><br></pre></td></tr></table></figure>
-<h3 id="C-gcc"><a href="#C-gcc" class="headerlink" title="C(gcc)"></a>C(gcc)</h3><p>[0~255] 중에서 하나 골라서 입력<br>[contents] 부분에 내용 입력<br><figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//방법1</span></span><br><span class="line"><span class="hljs-built_in">fprintf</span>(<span class="hljs-built_in">stderr</span>, <span class="hljs-string">"\033[38;5;[0~255]m[contents]\033[0m"</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//방법2</span></span><br><span class="line"><span class="hljs-built_in">printf</span>(<span class="hljs-string">"\033[38;5;[0~255]m[contents]\033[0m"</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//방법3</span></span><br><span class="line"><span class="hljs-built_in">printf</span>(<span class="hljs-string">"\033[38;5;[0~255]m"</span>);	<span class="hljs-comment">//글자색 변경</span></span><br><span class="line"><span class="hljs-built_in">printf</span>(<span class="hljs-string">"[contents]"</span>);		<span class="hljs-comment">//내용 입력</span></span><br><span class="line"><span class="hljs-built_in">printf</span>(<span class="hljs-string">"\033[0m"</span>);		<span class="hljs-comment">//원래 색(흰색)으로 변경</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//방법4 - 색상&amp;밑줄</span></span><br><span class="line"><span class="hljs-built_in">printf</span>(<span class="hljs-string">"\033[33;4m[contents]\033[0m"</span>);</span><br></pre></td></tr></table></figure></p>
-<p>&lt;참조&gt; <a href="http://jafrog.com/2013/11/23/colors-in-terminal.html" target="_blank" rel="noopener">http://jafrog.com/2013/11/23/colors-in-terminal.html</a></p>
-
-        </div>
-        
-        <div class="level is-size-7 is-uppercase">
-            <div class="level-start">
-                <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Linux/">Linux</a>
-                </div>
-            </div>
+            <h2 id="Redis-서버"><a href="#Redis-서버" class="headerlink" title="Redis 서버"></a>Redis 서버</h2><h3 id="Redis-설치-및-실행"><a href="#Redis-설치-및-실행" class="headerlink" title="Redis 설치 및 실행"></a>Redis 설치 및 실행</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">[~]$ wget http://download.redis.io/redis-stable.tar.gz</span><br><span class="line">[~]$ tar xvzf redis-stable.tar.gz</span><br><span class="line">[~]$ <span class="hljs-built_in">cd</span> redis-stable/src</span><br><span class="line">[~]$ vim Makefile</span><br><span class="line"></span><br><span class="line">PREFIX?=~/apps/redis-server &lt;- 이부분 수정</span><br><span class="line"></span><br><span class="line">[~ src]$ mkdir ~/apps/redis-server</span><br><span class="line">[~ src]$ make PREFIX=~/apps/</span><br><span class="line">[~ src]$ make <span class="hljs-built_in">test</span></span><br><span class="line">[~ src]$ make install</span><br><span class="line">[~ src]$ <span class="hljs-built_in">cd</span> ~/apps/redis-server</span><br><span class="line">[~ redis-server]$ mkdir conf</span><br><span class="line">[~ redis-server]$ cp ~/redis-stable/redis.conf ./conf/</span><br><span class="line">[~ redis-server]$ vim conf/redis.conf</span><br><span class="line"> </span><br><span class="line"><span class="hljs-built_in">bind</span> x.x.x.x &lt;- 이 부분을 현재 서버 IP로 설정</span><br><span class="line">daemonize yes &lt;- 이 부분 no를 yes로 수정</span><br><span class="line"> </span><br><span class="line">[~ redis-server]$ ./bin/redis-server ./conf/redis.conf</span><br><span class="line">[~ redis-server]$ ps -ef | grep redis</span><br><span class="line"> </span><br><span class="line">-   0000     1  0 00:00 ?        00:00:00 ./bin/redis-server conf/redis.conf x.x.x.x:6379</span><br><span class="line">-   0000 00000  0 00:00 pts/0    00:00:00 grep redis</span><br></pre></td></tr></table></figure>
+<h3 id="실행-스크립트"><a href="#실행-스크립트" class="headerlink" title="실행 스크립트"></a>실행 스크립트</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#!/bin/bash</span></span><br><span class="line">REDIS_DIR=~/apps/redis-server</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">#### Main #####</span></span><br><span class="line"><span class="hljs-comment"># apps/redis-server/bin/redis-server apps/redis-server/conf/redis.conf</span></span><br><span class="line"><span class="hljs-variable">$REDIS_DIR</span>/bin/redis-server <span class="hljs-variable">$REDIS_DIR</span>/conf/redis.conf</span><br></pre></td></tr></table></figure>
+<h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><h3 id="pom-xml"><a href="#pom-xml" class="headerlink" title="pom.xml"></a>pom.xml</h3><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">	<span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">	<span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">     <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>biz.paluch.redis<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">     <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>lettuce<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">     <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>4.5.0.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="application-properties"><a href="#application-properties" class="headerlink" title="application.properties"></a>application.properties</h3><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">spring.redis.lettuce.pool.max-active=<span class="hljs-number">10</span></span><br><span class="line">spring.redis.lettuce.pool.max-idle=<span class="hljs-number">10</span></span><br><span class="line">spring.redis.lettuce.pool.min-idle=<span class="hljs-number">2</span></span><br><span class="line">spring.redis.port=<span class="hljs-number">6379</span></span><br><span class="line">spring.redis.host=x.x.x.x</span><br></pre></td></tr></table></figure>
+<h3 id="RedisConfiquration-java"><a href="#RedisConfiquration-java" class="headerlink" title="RedisConfiquration.java"></a>RedisConfiquration.java</h3><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@Configuration</span>    </span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RedisConfiguration</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-meta">@Bean</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> RedisConnectionFactory <span class="hljs-title">redisConnectionFactory</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> LettuceConnectionFactory(<span class="hljs-string">"x.x.x.x"</span>, <span class="hljs-number">6379</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-meta">@Bean</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> RedisTemplate&lt;String, Object&gt; <span class="hljs-title">redisTemplate</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        RedisTemplate&lt;String, Object&gt; redisTemplate = <span class="hljs-keyword">new</span> RedisTemplate&lt;&gt;();</span><br><span class="line">        redisTemplate.setConnectionFactory(redisConnectionFactory());</span><br><span class="line">        redisTemplate.setKeySerializer(<span class="hljs-keyword">new</span> StringRedisSerializer());</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> redisTemplate;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="RedisServiceTest-java"><a href="#RedisServiceTest-java" class="headerlink" title="RedisServiceTest.java"></a>RedisServiceTest.java</h3><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@RunWith</span>(SpringRunner.class)</span><br><span class="line"><span class="hljs-meta">@SpringBootTest</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RedisServiceTest</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">    <span class="hljs-meta">@Autowired</span></span><br><span class="line">    RedisTemplate&lt;String, Object&gt; redisTemplate;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-meta">@Test</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        ValueOperations&lt;String, Object&gt; vop = redisTemplate.opsForValue();</span><br><span class="line">        </span><br><span class="line">        vop.set(<span class="hljs-string">"test1"</span>, <span class="hljs-string">"햇님"</span>);</span><br><span class="line">        assertEquals(<span class="hljs-string">"햇님"</span>,vop.get(<span class="hljs-string">"test1"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         </div>
         
         
@@ -239,52 +191,9 @@
 
 
 
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/05/25/socketchat/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Linux에서 Socket으로 채팅구현하기</span>
-            </a>
-        </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2018/05/18/P-Socket/">
-                <span class="level-item">(개인 프로젝트) 클라이언트를 관리하는 서버 프로그램 작성</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
-    </div>
-</div>
 
 
 
-<div class="card">
-    <div class="card-content">
-        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
-        
-<script>
-    var disqus_config = function () {
-        this.page.url = 'http://crazythink.github.io/2018/05/24/LinuxColor/';
-        this.page.identifier = '2018/05/24/LinuxColor/';
-    };
-    (function() {
-        var d = document, s = d.createElement('script');  
-        s.src = '//' + 'crazythink' + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-
-<div id="disqus_thread">
-    
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-    </div>
-</div>
 </div>
                 
 
@@ -1046,7 +955,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="Linux에 색상 출력하기" height="28">
+                    <img src="/images/logo.png" alt="습관적 프로그래밍" height="28">
                 
                 </a>
                 <p class="is-size-7">
