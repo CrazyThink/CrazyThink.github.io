@@ -150,6 +150,53 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-02-13T08:00:00.000Z">2019-02-13</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Spring/">Spring</a>
+                </div>
+                
+                <!--
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    몇 초 read (About 110 words)
+                </span>
+                
+                -->
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/02/13/Fixture/">Test에서 Fixture란?</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="정의"><a href="#정의" class="headerlink" title="정의"></a>정의</h1><p>테스트를 수행하는 데 필요한 정보나 오브젝트</p>
+<h1 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h1><p>일반적으로 픽스처는 여러 테스트에서 반복적으로 사용되기 때문에 <code>@Before</code>메소드를 이용해 생성해두면 편리하다.</p>
+<h1 id="예시"><a href="#예시" class="headerlink" title="예시"></a>예시</h1><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserDaoTest</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">private</span> UserDao dao; <span class="hljs-comment">//Fixture</span></span><br><span class="line">    <span class="hljs-keyword">private</span> User user1; <span class="hljs-comment">//Fixture</span></span><br><span class="line">    <span class="hljs-keyword">private</span> User user2; <span class="hljs-comment">//Fixture</span></span><br><span class="line">    </span><br><span class="line">    <span class="hljs-meta">@Before</span></span><br><span class="line">    <span class="hljs-function">publicc <span class="hljs-keyword">void</span> <span class="hljs-title">setUp</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        ...</span><br><span class="line">        <span class="hljs-keyword">this</span>.user1 = <span class="hljs-keyword">new</span> User(<span class="hljs-string">"rookie"</span>, <span class="hljs-string">"루키맨"</span>, <span class="hljs-string">"spring1장"</span>);</span><br><span class="line">        <span class="hljs-keyword">this</span>.user2 = <span class="hljs-keyword">new</span> User(<span class="hljs-string">"rokie"</span>, <span class="hljs-string">"로키맨"</span>, <span class="hljs-string">"spring2장"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-02-09T11:00:00.000Z">2019-02-09</time>
                 
                 <div class="level-item">
@@ -286,7 +333,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        23
+                        24
                     </p>
                 </div>
             </div>
@@ -306,7 +353,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        31
+                        32
                     </p>
                 </div>
             </div>
@@ -401,7 +448,7 @@
                 <span class="level-item">Spring</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Tomcat/">
@@ -431,7 +478,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 13.33px;">C#</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/CS188/" style="font-size: 10px;">CS188</a> <a href="/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/tags/Chat/" style="font-size: 13.33px;">Chat</a> <a href="/tags/Diary/" style="font-size: 10px;">Diary</a> <a href="/tags/Editor/" style="font-size: 10px;">Editor</a> <a href="/tags/FTP/" style="font-size: 13.33px;">FTP</a> <a href="/tags/Game/" style="font-size: 10px;">Game</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Messenger/" style="font-size: 10px;">Messenger</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/NHN/" style="font-size: 10px;">NHN</a> <a href="/tags/OpenMP/" style="font-size: 13.33px;">OpenMP</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/STL/" style="font-size: 13.33px;">STL</a> <a href="/tags/Singleton/" style="font-size: 10px;">Singleton</a> <a href="/tags/Socket/" style="font-size: 13.33px;">Socket</a> <a href="/tags/Spring/" style="font-size: 13.33px;">Spring</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/Unity/" style="font-size: 10px;">Unity</a> <a href="/tags/server/" style="font-size: 10px;">server</a>
+        <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 12.5px;">C#</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/CS188/" style="font-size: 10px;">CS188</a> <a href="/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/tags/Chat/" style="font-size: 12.5px;">Chat</a> <a href="/tags/Diary/" style="font-size: 10px;">Diary</a> <a href="/tags/Editor/" style="font-size: 10px;">Editor</a> <a href="/tags/FTP/" style="font-size: 12.5px;">FTP</a> <a href="/tags/Game/" style="font-size: 10px;">Game</a> <a href="/tags/JUnit/" style="font-size: 10px;">JUnit</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Messenger/" style="font-size: 10px;">Messenger</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/NHN/" style="font-size: 10px;">NHN</a> <a href="/tags/OpenMP/" style="font-size: 12.5px;">OpenMP</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/STL/" style="font-size: 12.5px;">STL</a> <a href="/tags/Singleton/" style="font-size: 10px;">Singleton</a> <a href="/tags/Socket/" style="font-size: 12.5px;">Socket</a> <a href="/tags/Spring/" style="font-size: 15px;">Spring</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/Unity/" style="font-size: 10px;">Unity</a> <a href="/tags/server/" style="font-size: 10px;">server</a>
     </div>
 </div>
 
@@ -442,6 +489,19 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-13T08:00:00.000Z">2019-02-13</time></div>
+                    <a href="/2019/02/13/Fixture/" class="has-link-black-ter is-size-6">Test에서 Fixture란?</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Spring/">Spring</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -495,19 +555,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-09-28T10:00:00.000Z">2018-09-28</time></div>
-                    <a href="/2018/09/28/algorithm/" class="has-link-black-ter is-size-6">&lt;algorithm&gt;</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/C/">C++</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -526,7 +573,7 @@
                     <span class="level-item">2월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -776,6 +823,17 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/JUnit/">
+                        <span class="level-start">
+                            <span class="level-item">JUnit</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/Java/">
                         <span class="level-start">
                             <span class="level-item">Java</span>
@@ -935,7 +993,7 @@
                             <span class="level-item">Spring</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">2</span>
+                            <span class="level-item tag">3</span>
                         </span>
                     </a>
                 </li>
