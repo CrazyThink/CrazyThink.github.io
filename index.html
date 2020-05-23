@@ -160,7 +160,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/05/23/some-every/">forEach()의 업그레이드 every(), some()</a>
+                <a class="has-link-black-ter" href="/2020/05/23/some-every/">Javascript forEach()의 업그레이드 every(), some()</a>
             
         </h1>
         <div class="content">
@@ -171,7 +171,7 @@
 <h2 id="some"><a href="#some" class="headerlink" title="some()"></a>some()</h2><p>배열 안의 어떤 요소라도 주어진 판별 함수를 통과하는지 테스트합니다.</p>
 <p>빈 배열에서 호출하면 무조건 <code>false</code>를 반환합니다.</p>
 <p>중간에 어떤 요소라도 통과하면( <code>return true</code>인 경우) 더이상 반복하지 않고 종료됩니다.</p>
-<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> array1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];</span><br><span class="line"><span class="hljs-keyword">const</span> array2 = [<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> result1 = array1.every(<span class="hljs-function">(<span class="hljs-params">element</span>) =&gt;</span> element % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(result1);</span><br><span class="line"><span class="hljs-comment">// expected output: true</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> result2 = array2.every(<span class="hljs-function">(<span class="hljs-params">element</span>) =&gt;</span> element % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(result2);</span><br><span class="line"><span class="hljs-comment">// expected output: false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> array1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];</span><br><span class="line"><span class="hljs-keyword">const</span> array2 = [<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> result1 = array1.some(<span class="hljs-function">(<span class="hljs-params">element</span>) =&gt;</span> element % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(result1);</span><br><span class="line"><span class="hljs-comment">// expected output: true</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> result2 = array2.some(<span class="hljs-function">(<span class="hljs-params">element</span>) =&gt;</span> element % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(result2);</span><br><span class="line"><span class="hljs-comment">// expected output: false</span></span><br></pre></td></tr></table></figure>
 
         </div>
         
@@ -1045,7 +1045,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-05-23T12:00:00.000Z">2020-05-23</time></div>
-                    <a href="/2020/05/23/some-every/" class="has-link-black-ter is-size-6">forEach()의 업그레이드 every(), some()</a>
+                    <a href="/2020/05/23/some-every/" class="has-link-black-ter is-size-6">Javascript forEach()의 업그레이드 every(), some()</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Javascript/">Javascript</a>
                     </p>
