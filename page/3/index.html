@@ -140,6 +140,77 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-18T00:00:00.000Z">2018-05-18</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Projects/">Projects</a>
+                </div>
+                
+                <!--
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4분 read (About 613 words)
+                </span>
+                
+                -->
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/18/P-Socket/">(개인 프로젝트) 클라이언트를 관리하는 서버 프로그램 작성</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="소개"><a href="#소개" class="headerlink" title="소개"></a>소개</h2><ul>
+<li>인원 : 1인</li>
+<li>담당 : 프로그램 구현 전체</li>
+<li>개발 환경 : Ubuntu 16.04 LTS, VMware Workstation 14 Player</li>
+<li>문제<ul>
+<li>클라이언트 간의 채팅 프로그램을 기반으로 작성한다.</li>
+<li>서버는 접속하는 클라이언트가 송신한 메시지를 모두 관리하고 모니터링 한다.</li>
+<li>클라이언트가 보내는 문자를 모두 기록하고 있으며, 총 문자 수, 보낸 시간 등의 내역을 보관한다.</li>
+<li>이 외에 서버는 총 접속자 수(클라이언트의 총 접속자 수), 각 클라이언트의 접속 시간, 클라이언트의 IP를 관리한다.</li>
+<li>클라이언트는 최소 5개 이상 접속이 되도록 작성하시오.</li>
+</ul>
+</li>
+<li>소스코드 : <a href="https://github.com/CrazyThink/Project/tree/master/Chat" target="_blank" rel="noopener">Linux에서 Socket으로 채팅구현하기</a></li>
+<li>사용법 : <a href="https://crazythink.github.io/2018/05/25/socketchat/">Linux에서 Socket으로 채팅구현하기</a></li>
+</ul>
+<h2 id="내용"><a href="#내용" class="headerlink" title="내용"></a>내용</h2><p>컴퓨터의 수가 부족하여 부득이하게 로컬에서 다중 클라이언트를 실행하였습니다.</p>
+<p><img src="https://user-images.githubusercontent.com/20267962/44670437-a4e5bc80-aa5d-11e8-991b-3dd99e84d4e2.png" alt=""><br>이 중에 가장 오른 쪽 위에 있는 터미널이 서버 역할을 하고 있습니다.<br>서버에서는 클라이언트가 보내는 메시지를 모두 확인할 수 있습니다.</p>
+<p><img src="https://user-images.githubusercontent.com/20267962/44670444-a6af8000-aa5d-11e8-9c18-0b196c0b93f0.png" alt=""><br>위 터미널은 서버가 처음 실행되었을 때 나오는 화면이고, 서버는 4가지의 명령어를 사용할 수 있습니다.</p>
+<ul>
+<li><code>help</code> : 도움말 출력</li>
+<li><code>num_user</code> : 현재 접속한 유저의 수</li>
+<li><code>num_chat</code> : 현재까지 오간 대화의 수</li>
+<li><code>ip_list</code> : 현재 접속한 유저들의 IP</li>
+</ul>
+<h2 id="어려웠던-점"><a href="#어려웠던-점" class="headerlink" title="어려웠던 점"></a>어려웠던 점</h2><p>이 문제를 해결하면서 어려웠던 점은 기능 구현보다 터미널의 글씨에 색상을 입히는 작업이었습니다. 일반적인 <code>printf</code>로는 잘 작동하지 않았고,<code>write</code>나 <code>fprintf(stderr)</code>을 이용해서 해결하였습니다.</p>
+<h2 id="배운-점"><a href="#배운-점" class="headerlink" title="배운 점"></a>배운 점</h2><p>이번 프로젝트는 사용자 편의성을 높이는 데에 더욱 집중하였고, 더욱 깔끔한 출력을 하기 위해서 많은 시간을 투자하였습니다. 그러다보니 평소에 습득하지 못했던 지식을 더욱 알아갈 수 있는 계기가 되었고, 실력향상에 많은 도움이 되었습니다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2018-05-03T07:00:00.000Z">2018-05-03</time>
                 
                 <div class="level-item">
@@ -598,7 +669,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        26
+                        27
                     </p>
                 </div>
             </div>
@@ -705,7 +776,7 @@
                 <span class="level-item">Javascript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Linux/">
@@ -759,7 +830,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 12.5px;">C#</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/CS188/" style="font-size: 10px;">CS188</a> <a href="/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/tags/Chat/" style="font-size: 12.5px;">Chat</a> <a href="/tags/Database/" style="font-size: 10px;">Database</a> <a href="/tags/Diary/" style="font-size: 10px;">Diary</a> <a href="/tags/Editor/" style="font-size: 10px;">Editor</a> <a href="/tags/FTP/" style="font-size: 12.5px;">FTP</a> <a href="/tags/Game/" style="font-size: 10px;">Game</a> <a href="/tags/JUnit/" style="font-size: 10px;">JUnit</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Messenger/" style="font-size: 10px;">Messenger</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/NHN/" style="font-size: 10px;">NHN</a> <a href="/tags/OpenMP/" style="font-size: 12.5px;">OpenMP</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Partitioning/" style="font-size: 10px;">Partitioning</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/STL/" style="font-size: 12.5px;">STL</a> <a href="/tags/Singleton/" style="font-size: 10px;">Singleton</a> <a href="/tags/Socket/" style="font-size: 12.5px;">Socket</a> <a href="/tags/Spring/" style="font-size: 15px;">Spring</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/Unity/" style="font-size: 10px;">Unity</a> <a href="/tags/server/" style="font-size: 10px;">server</a>
+        <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 12.5px;">C#</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/CS188/" style="font-size: 10px;">CS188</a> <a href="/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/tags/Chat/" style="font-size: 12.5px;">Chat</a> <a href="/tags/Database/" style="font-size: 10px;">Database</a> <a href="/tags/Diary/" style="font-size: 10px;">Diary</a> <a href="/tags/Editor/" style="font-size: 10px;">Editor</a> <a href="/tags/FTP/" style="font-size: 12.5px;">FTP</a> <a href="/tags/Game/" style="font-size: 10px;">Game</a> <a href="/tags/JUnit/" style="font-size: 10px;">JUnit</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 12.5px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Messenger/" style="font-size: 10px;">Messenger</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/NHN/" style="font-size: 10px;">NHN</a> <a href="/tags/OpenMP/" style="font-size: 12.5px;">OpenMP</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Partitioning/" style="font-size: 10px;">Partitioning</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/STL/" style="font-size: 12.5px;">STL</a> <a href="/tags/Singleton/" style="font-size: 10px;">Singleton</a> <a href="/tags/Socket/" style="font-size: 12.5px;">Socket</a> <a href="/tags/Spring/" style="font-size: 15px;">Spring</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/Unity/" style="font-size: 10px;">Unity</a> <a href="/tags/server/" style="font-size: 10px;">server</a>
     </div>
 </div>
 
@@ -770,6 +841,19 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-05-23T13:00:00.000Z">2020-05-23</time></div>
+                    <a href="/2020/05/23/map-filter-find-reduce/" class="has-link-black-ter is-size-6">Javascript Array 가공 map(), filter(), find(), reduce()</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Javascript/">Javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -823,19 +907,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-29T12:00:00.000Z">2019-01-29</time></div>
-                    <a href="/2019/01/29/TheContextContainer/" class="has-link-black-ter is-size-6">The Context Container</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Tomcat/">Tomcat</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -854,7 +925,7 @@
                     <span class="level-item">5월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1153,7 +1224,7 @@
                             <span class="level-item">Javascript</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">1</span>
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>

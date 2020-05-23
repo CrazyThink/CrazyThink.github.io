@@ -150,6 +150,63 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-05-23T13:00:00.000Z">2020-05-23</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Javascript/">Javascript</a>
+                </div>
+                
+                <!--
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2분 read (About 316 words)
+                </span>
+                
+                -->
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/05/23/map-filter-find-reduce/">Javascript Array 가공 map(), filter(), find(), reduce()</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h2><p>배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환합니다.</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> array1 = [<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>];</span><br><span class="line"><span class="hljs-keyword">const</span> array2 = [&#123; <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'a'</span>&#125;, &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>&#125;, &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'b'</span>&#125;];</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> map1 = array1.map(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x * <span class="hljs-number">2</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(map1);</span><br><span class="line"><span class="hljs-comment">// expected output: Array [2, 8, 18, 32]</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> map2 = array2.map(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.value);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(map2);</span><br><span class="line"><span class="hljs-comment">// expected output: Array ['a', undefined, 'b']</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map</a></p>
+<h2 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h2><p>주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> words = [<span class="hljs-string">'spray'</span>, <span class="hljs-string">'limit'</span>, <span class="hljs-string">'elite'</span>, <span class="hljs-string">'exuberant'</span>, <span class="hljs-string">'destruction'</span>, <span class="hljs-string">'present'</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> result = words.filter(<span class="hljs-function"><span class="hljs-params">word</span> =&gt;</span> word.length &gt; <span class="hljs-number">6</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(result);</span><br><span class="line"><span class="hljs-comment">// expected output: Array ["exuberant", "destruction", "present"]</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter</a></p>
+<h2 id="find"><a href="#find" class="headerlink" title="find()"></a>find()</h2><p>메서드는 주어진 판별 함수를 만족하는 <strong>첫 번째 요소</strong>의 <strong>값</strong>을 반환합니다. 그런 요소가 없다면 <code>undefined</code>를 반환합니다.</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> words = [<span class="hljs-string">'spray'</span>, <span class="hljs-string">'limit'</span>, <span class="hljs-string">'elite'</span>, <span class="hljs-string">'exuberant'</span>, <span class="hljs-string">'destruction'</span>, <span class="hljs-string">'present'</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> result = words.find(<span class="hljs-function"><span class="hljs-params">word</span> =&gt;</span> word.length &gt; <span class="hljs-number">6</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(result);</span><br><span class="line"><span class="hljs-comment">// expected output: "exuberant"</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/find" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/find</a></p>
+<h2 id="reduce"><a href="#reduce" class="headerlink" title="reduce()"></a>reduce()</h2><p>배열의 각 요소에 대해 주어진 <strong>리듀서</strong>(reducer) 함수를 실행하고, 하나의 결과값을 반환합니다</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> array1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];</span><br><span class="line"><span class="hljs-keyword">const</span> reducer = <span class="hljs-function">(<span class="hljs-params">accumulator, currentValue</span>) =&gt;</span> accumulator + currentValue;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 1 + 2 + 3 + 4</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(array1.reduce(reducer));</span><br><span class="line"><span class="hljs-comment">// expected output: 10</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 5 + 1 + 2 + 3 + 4</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(array1.reduce(reducer, <span class="hljs-number">5</span>));</span><br><span class="line"><span class="hljs-comment">// expected output: 15</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-05-23T12:00:00.000Z">2020-05-23</time>
                 
                 <div class="level-item">
@@ -161,7 +218,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1분 read (About 221 words)
+                    2분 read (About 247 words)
                 </span>
                 
                 -->
@@ -178,10 +235,12 @@
 <p>빈 배열에서 호출하면 무조건 <code>true</code>를 반환합니다.</p>
 <p>중간에 통과하지 않는 요소가 있으면( <code>return false</code>인 경우) 더이상 반복하지 않고 종료됩니다.</p>
 <figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> array1 = [<span class="hljs-number">1</span>, <span class="hljs-number">30</span>, <span class="hljs-number">39</span>, <span class="hljs-number">29</span>, <span class="hljs-number">10</span>, <span class="hljs-number">13</span>];</span><br><span class="line"><span class="hljs-keyword">const</span> array2 = [<span class="hljs-number">1</span>, <span class="hljs-number">30</span>, <span class="hljs-number">41</span>, <span class="hljs-number">29</span>, <span class="hljs-number">10</span>, <span class="hljs-number">13</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> result1 = array1.every(<span class="hljs-function">(<span class="hljs-params">currentValue</span>) =&gt;</span> currentValue &lt; <span class="hljs-number">40</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(result1);</span><br><span class="line"><span class="hljs-comment">// expected output: true</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> result2 = array2.every(<span class="hljs-function">(<span class="hljs-params">currentValue</span>) =&gt;</span> currentValue &lt; <span class="hljs-number">40</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(result2);</span><br><span class="line"><span class="hljs-comment">// expected output: false</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/every" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/every</a></p>
 <h2 id="some"><a href="#some" class="headerlink" title="some()"></a>some()</h2><p>배열 안의 어떤 요소라도 주어진 판별 함수를 통과하는지 테스트합니다.</p>
 <p>빈 배열에서 호출하면 무조건 <code>false</code>를 반환합니다.</p>
 <p>중간에 어떤 요소라도 통과하면( <code>return true</code>인 경우) 더이상 반복하지 않고 종료됩니다.</p>
 <figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> array1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];</span><br><span class="line"><span class="hljs-keyword">const</span> array2 = [<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> result1 = array1.some(<span class="hljs-function">(<span class="hljs-params">element</span>) =&gt;</span> element % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(result1);</span><br><span class="line"><span class="hljs-comment">// expected output: true</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> result2 = array2.some(<span class="hljs-function">(<span class="hljs-params">element</span>) =&gt;</span> element % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(result2);</span><br><span class="line"><span class="hljs-comment">// expected output: false</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/some" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/some</a></p>
 
         </div>
         
@@ -238,7 +297,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        26
+                        27
                     </p>
                 </div>
             </div>
@@ -345,7 +404,7 @@
                 <span class="level-item">Javascript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Linux/">
@@ -399,7 +458,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 12.5px;">C#</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/CS188/" style="font-size: 10px;">CS188</a> <a href="/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/tags/Chat/" style="font-size: 12.5px;">Chat</a> <a href="/tags/Database/" style="font-size: 10px;">Database</a> <a href="/tags/Diary/" style="font-size: 10px;">Diary</a> <a href="/tags/Editor/" style="font-size: 10px;">Editor</a> <a href="/tags/FTP/" style="font-size: 12.5px;">FTP</a> <a href="/tags/Game/" style="font-size: 10px;">Game</a> <a href="/tags/JUnit/" style="font-size: 10px;">JUnit</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Messenger/" style="font-size: 10px;">Messenger</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/NHN/" style="font-size: 10px;">NHN</a> <a href="/tags/OpenMP/" style="font-size: 12.5px;">OpenMP</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Partitioning/" style="font-size: 10px;">Partitioning</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/STL/" style="font-size: 12.5px;">STL</a> <a href="/tags/Singleton/" style="font-size: 10px;">Singleton</a> <a href="/tags/Socket/" style="font-size: 12.5px;">Socket</a> <a href="/tags/Spring/" style="font-size: 15px;">Spring</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/Unity/" style="font-size: 10px;">Unity</a> <a href="/tags/server/" style="font-size: 10px;">server</a>
+        <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 12.5px;">C#</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/CS188/" style="font-size: 10px;">CS188</a> <a href="/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/tags/Chat/" style="font-size: 12.5px;">Chat</a> <a href="/tags/Database/" style="font-size: 10px;">Database</a> <a href="/tags/Diary/" style="font-size: 10px;">Diary</a> <a href="/tags/Editor/" style="font-size: 10px;">Editor</a> <a href="/tags/FTP/" style="font-size: 12.5px;">FTP</a> <a href="/tags/Game/" style="font-size: 10px;">Game</a> <a href="/tags/JUnit/" style="font-size: 10px;">JUnit</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 12.5px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Messenger/" style="font-size: 10px;">Messenger</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/NHN/" style="font-size: 10px;">NHN</a> <a href="/tags/OpenMP/" style="font-size: 12.5px;">OpenMP</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Partitioning/" style="font-size: 10px;">Partitioning</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/STL/" style="font-size: 12.5px;">STL</a> <a href="/tags/Singleton/" style="font-size: 10px;">Singleton</a> <a href="/tags/Socket/" style="font-size: 12.5px;">Socket</a> <a href="/tags/Spring/" style="font-size: 15px;">Spring</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/Unity/" style="font-size: 10px;">Unity</a> <a href="/tags/server/" style="font-size: 10px;">server</a>
     </div>
 </div>
 
@@ -410,6 +469,19 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-05-23T13:00:00.000Z">2020-05-23</time></div>
+                    <a href="/2020/05/23/map-filter-find-reduce/" class="has-link-black-ter is-size-6">Javascript Array 가공 map(), filter(), find(), reduce()</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Javascript/">Javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -463,19 +535,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-29T12:00:00.000Z">2019-01-29</time></div>
-                    <a href="/2019/01/29/TheContextContainer/" class="has-link-black-ter is-size-6">The Context Container</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Tomcat/">Tomcat</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -494,7 +553,7 @@
                     <span class="level-item">5월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -793,7 +852,7 @@
                             <span class="level-item">Javascript</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">1</span>
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
